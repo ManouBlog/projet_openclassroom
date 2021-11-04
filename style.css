@@ -1,0 +1,239 @@
+
+
+*,*::after,*::before{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#content{
+    display:flex;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+.content_formulaire{
+    width:55%;
+    padding: .5em 1em ;
+}
+.content_image{
+    width: 55%;
+    position: relative;
+}
+.content_image_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:0;
+}
+.content_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter:contrast(130%) brightness(50%) ;
+}
+.content_image_texte{
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left:50%;
+    transform:translateX(-50%);
+}
+.content_image_texte .ecriteau{
+    font-weight:bold;
+    color: white;
+    font-size: 1.5em;
+}
+.content_image_texte .ecriteau::before{
+   content:"<<";
+   font-size: 1em;
+   display:inline-block;
+}
+.content_image_texte .ecriteau::after{
+    content:">>";
+    font-size: 1em;
+    display:inline-block;
+ }
+.content_image_texte .sub_ecriteau{
+    font-weight:bold;
+    font-size: 1em;
+    color:white;
+}
+header img{
+   width:40%;
+   margin: 1em auto;
+}
+header{
+    padding:0 0 3em 1em;
+}
+main h3{
+    text-align: center;
+    font-size: 2.8em;
+    color: rgb(68, 68, 92);
+}
+main h3::first-letter{
+    font-size: 1.2em;
+}
+main #main_btn_connexion{
+    text-align: center;
+}
+main h3{
+    margin:0 0 .5em 0;
+}
+main #main_btn_connexion button{
+    width:160px;
+    height: 40px;
+    background: transparent;
+    border: 0;
+    text-transform: uppercase;
+    font-size:.7em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+    position:relative;
+    padding-left: .6em;
+    font-weight: bold;
+}
+main #main_btn_connexion button:nth-child(1){
+    border: 2px solid #1c72e2;
+    color: #1c72e2;
+    
+}
+main #main_btn_connexion button:nth-child(2){
+    border: 2px solid gray;
+    color: gray;
+    
+}
+main #main_btn_connexion button:nth-child(3){
+    border: 2px solid black;
+    color: black;
+}
+button img{
+    width:20px;
+    height:20px;
+    position: absolute;
+    left: 1.7em;
+    top: 20%;
+}
+button img.apple{
+    width:20px;
+    height:20px;
+    position: absolute;
+    left: 3em;
+    top: 20%;
+}
+main .para_ou{
+    width: 100px;
+    margin: 1em auto .5em auto;
+    text-align: center;
+    font-size:1.5em;
+    color:gray;
+    position: relative;
+}
+main .para_ou::after{
+    content:"";
+    background: rgb(212, 211, 211);
+    width:40px;
+    height: 3px;
+    display: inline-block;
+    position:absolute;
+    top:57%;  
+    right: -.3em;
+}
+main .para_ou::before{
+    content:"";
+    background: rgb(212, 211, 211);
+    width:40px;
+    height: 3px;
+    display: inline-block;
+    position:absolute;
+    top:57%;  
+    left: -.3em;
+
+}
+main .para_connecter{
+    text-align:center;
+    font-weight: 500;
+}
+main form {
+    width:80%;
+    margin: auto;
+}
+main form div input:not(input[type="submit"]){
+    width:100%;
+    height:50px;
+    border:none;
+    border-bottom: 2px solid rgb(142, 144, 145);
+    background: #f9f8ff;
+    padding-left: 1em;
+    font-size: 1.3em;
+    outline: none;
+    margin: 1em 0;
+}
+main .content_submit{
+    text-align: center;
+}
+main form div input[type="submit"]{
+    width: 120px;
+    height: 40px;
+    color:white;
+    border: none;
+    background: #7451eb;
+    border-radius: 5px;
+    font-size:1em;
+    margin: 1em 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+.inscrivez_vous{
+    text-align: center;
+}
+@media (max-width:1029px) {
+    
+    #content{
+     display: block;
+
+    }
+    header{
+        padding: 0;
+    }
+    .content_formulaire{
+        width: 100%;
+        position: static;
+    }
+    .content_image{
+        width: 100%; 
+        height: 100%;
+        margin:1em 0 0 0;
+    }
+}
+@media (max-width:600px){
+    main #main_btn_connexion{
+        width:80%;
+        margin: auto;
+    }
+    main #main_btn_connexion button{
+        display: block;
+        margin-left: 50%;
+        transform:translateX(-50%);
+        margin-bottom: 1em;
+    }
+    .content_image_texte .ecriteau {
+        font-size: 1.3em;
+    }
+   
+}
+@media (max-width:300px){
+    main h3{
+        font-size:2em;
+    }
+    header img{
+        width:100%;
+    }
+}
